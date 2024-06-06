@@ -45,18 +45,40 @@
         </div>
 
     </div>
-    <a href="https://www.instagram.com/poona_memez?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" id="social-media">
+    <a href="https://www.instagram.com/poona_memez?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        id="social-media">
         <i class="fa-brands fa-instagram"> Instagram </i>
     </a>
     <a href="https://www.linkedin.com/in/mohamedanees/" id="social-media-2">
         <i class="fa-brands fa-linkedin"> LinkedIn</i>
-    </a>  
+    </a>
     <footer>
         <h1 class="footer-last">Copyright &#169; : Content designed and developed by Mohamed Anees M K</h1>
     </footer>
 </body>
-<script src="/Calculator/Script.js">
+<script>
+    let Output_Screen = document.getElementById('input-box');
 
+    function Display(num) {
+        Output_Screen.value = Output_Screen.value + num;
+    }
+
+    function Calculate() {
+        try {
+            Output_Screen.value = eval(Output_Screen.value);
+        }
+        catch (err) {
+            alert('Operation is invalid');
+        }
+    }
+
+    function Clear() {
+        Output_Screen.value = "";
+    }
+
+    function Del() {
+        Output_Screen.value = Output_Screen.value.slice(0, -1);
+    }
 </script>
 
 </html>
